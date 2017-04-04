@@ -1,7 +1,7 @@
 FROM alpine:latest
-MAINTAINER William Huba <william.huba@docurated.com>
+MAINTAINER Peter Varsanyi <superfly@gwelican.eu>
 
-ENV VAULT_VERSION 0.6.1
+ENV VAULT_VERSION 0.7.0
 
 RUN apk update && apk add --no-cache \
     openssl \
