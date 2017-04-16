@@ -32,6 +32,16 @@ It can also use the [app-id method](https://www.vaultproject.io/docs/auth/app-id
 
 Resource configuration using app-id authentication:
 
+Add resource_types to your config:
+
+``` yaml
+- name: vault
+  type: docker-image
+    source:
+    repository: gwelican/vault-secret
+    tag: latest
+```
+
 ``` yaml
 resources:
 - name: vault

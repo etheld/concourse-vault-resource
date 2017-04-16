@@ -4,7 +4,7 @@ login_appid() {
     token=$(vault write -format=json auth/app-id/login app_id=${vault_app_id} user_id=${vault_user_id} | jq -r '.auth.client_token')
     if [ -z "${token}" ]; then
         echo "ERROR: No token retrieved"
-	return 1
+	      return 1
     fi
     echo -n "${token}" > ~/.vault-token
 }

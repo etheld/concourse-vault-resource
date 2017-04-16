@@ -26,7 +26,7 @@ if [ ! -z "${skip_verify}" ]; then
     export VAULT_SKIP_VERIFY=1
 fi
 
-login_appid ${role_id} ${secret_id}
+login_appid ${app_id} ${user_id}
 
 for path in "${paths[@]}"; do
     mkdir -p ${destination}/$(dirname ${path})
