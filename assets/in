@@ -30,7 +30,8 @@ login_appid ${app_id} ${user_id}
 
 for path in "${paths[@]}"; do
     mkdir -p ${destination}/$(dirname ${path})
-    get_secret ${path} > ${destination}/${path}.json
+    get_secret ${path} > ${destination}/${path}
+    chmod 600 ${destination}/${path}
 done
 
 if [ ! -z "${expose_token}" ]; then

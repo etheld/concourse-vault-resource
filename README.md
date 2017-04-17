@@ -5,6 +5,8 @@
 Reads secrets from [Vault](https://www.vaultproject.io/).
 It can also use the [app-id method](https://www.vaultproject.io/docs/auth/app-id.html) to authenticate.
 
+It reads the value from path and puts it in a file that matches the path.
+
 ## Source Configuration
 
 * `url`: *Optional.* The location of the Vault server. Defaults to `https://vault.service.consul:8200`.
@@ -28,7 +30,6 @@ It can also use the [app-id method](https://www.vaultproject.io/docs/auth/app-id
   `VAUKT_SKIP_VERIFY=1`.
 
 ### Example
-
 
 Resource configuration using app-id authentication:
 
